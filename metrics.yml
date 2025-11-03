@@ -1,0 +1,17 @@
+metrics:
+  - name: total_cost
+    expression: "material_cost + labor_cost + overhead_cost"
+    description: "All-in cost per product and plant."
+    depends_on:
+      - fact_cost
+
+  - name: gross_margin_pct
+    expression: >
+      CASE
+        WHEN revenue = 0 THEN NULL
+        ELSE (revenue - total_cost) / revenue
+      END
+    description: "Gross margin percentage."
+    depends_on:
+      - fact_cost
+      - fact_revenue
