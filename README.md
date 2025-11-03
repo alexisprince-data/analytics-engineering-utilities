@@ -1,5 +1,5 @@
 # analytics-engineering-utilities
-Reusable Python + SQL utilities for analytics engineering, dbt-style modeling, and data product patterns.
+This repo provides modular utilities aligned to dbt-style analytics engineering workflows: layered modeling (raw → staging → marts), reusable automation frameworks, and semantic layer enablement for downstream business consumption.
 
 ## Contents
 - `ftp_framework.py` — class-based FTP/SFTP ingestion template (Python OOP, hash validation hooks)
